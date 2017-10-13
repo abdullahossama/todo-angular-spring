@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<title>Todo App</title>
+<style type="text/css">
+body {
+    padding-top: 60px;
+}
+ 
+.view-content{
+    padding-top: 50px;
+}
+ 
+.hasError{
+    color:#B82934;
+}
+</style>
+<link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"/>
+<link
+    href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-fUMURLTdEcpeYHly3PAwggI3l2UvdHNg/I+8LRph7hLDcAZm77YfDx3Tjum9d3vK"
+    crossorigin="anonymous"/>
+</head>
+<body>
+     
+     <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <h1>ToDo</h1>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="container">
+        <div ng-view="" class="view-content"></div>
+    </div>
+ 
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./app/app.js"></script>
+    <script type="text/javascript" src="./app/factory/factory.js"></script>
+    <script type="text/javascript" src="./app/controller/routes.js"></script>
+    <script type="text/javascript" src="./app/controller/todoItemController.js"></script>
+    <script type="text/javascript">
+	    var csrfParameter = '${_csrf.parameterName}';
+	    var csrfToken = '${_csrf.token}';
+	</script>
+</body>
+</html>
